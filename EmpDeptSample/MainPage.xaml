@@ -89,8 +89,8 @@
                                         Issue #2:  How to set selectvalue to a right value.
                                     -->
                                     <!--
-                                    <ComboBox  x:Name="cb1" ItemsSource="{x:Bind ListofLocationsInsideViewModel}" DisplayMemberPath="" SelectedValuePath=""  SelectedValue=""   />
-                                    <ComboBox  x:Name="cb2" ItemsSource="{x:Bind ListofLocationsInsidePageClass}" DisplayMemberPath="" SelectedValuePath=""  SelectedValue=""   />
+                                    <ComboBox  x:Name="cb1" ItemsSource="{x:Bind ListofLocationsInsideViewModel}" DisplayMemberPath="?" SelectedValuePath="?"  SelectedValue="?"   />
+                                    <ComboBox  x:Name="cb2" ItemsSource="{x:Bind ListofLocationsInsidePageClass}" DisplayMemberPath="?" SelectedValuePath="?"  SelectedValue="?"   />
                                     -->
                                     
 
