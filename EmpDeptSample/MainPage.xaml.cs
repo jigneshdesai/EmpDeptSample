@@ -24,6 +24,8 @@ namespace EmpDeptSample
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        public EmpDeptViewModel vm;// = new EmpDeptViewModel();
         public MainPage()
         {
             this.InitializeComponent();
@@ -39,16 +41,19 @@ namespace EmpDeptSample
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
+              vm = new EmpDeptViewModel();
 
-            ListofLocationsInsidePageClass = new List<Location>();
+        ListofLocationsInsidePageClass = new List<Location>();
             ListofLocationsInsidePageClass.Add(new Location(1, "USA"));
             ListofLocationsInsidePageClass.Add(new Location(2, "Canada"));
             ListofLocationsInsidePageClass.Add(new Location(3, "UK"));
             ListofLocationsInsidePageClass.Add(new Location(4, "China"));
             ListofLocationsInsidePageClass.Add(new Location(5, "India"));
 
-            EmpDeptViewModel obj = new EmpDeptViewModel();
-            listview3.ItemsSource = obj.InstanceOfDepartmentData;
+            //EmpDeptViewModel obj = new EmpDeptViewModel();
+            //listview3.ItemsSource = obj.InstanceOfDepartmentData;
+
+            this.Bindings.Update();
         }
     }
 }

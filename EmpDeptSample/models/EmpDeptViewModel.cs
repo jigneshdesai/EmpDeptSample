@@ -19,7 +19,7 @@ namespace EmpDeptSample.models
 
 
 
-        public List<Location> ListofLocationsInsideViewModel { get; set; }
+        public static List<Location> ListofLocationsInsideViewModel { get; set; }
 
         public EmpDeptViewModel() {
 

@@ -68,7 +68,7 @@
             <PivotItem Header="Combobox Binding[Does Not Work]">
                 <StackPanel>
                     <Button x:Name="btn2" Content="Click here - (Uncomment Combobox Lines in XAML Befoew clicking)" Click="btn2_Click"></Button>
-                    <ListView x:Name="listview3">
+                    <ListView x:Name="listview3" ItemsSource="{x:Bind vm.InstanceOfDepartmentData}">
                         <ListView.ItemTemplate>
                             <DataTemplate x:DataType="classes:Department">
                                 <StackPanel Orientation="Horizontal">
@@ -92,7 +92,7 @@
                                     <ComboBox  x:Name="cb1" ItemsSource="{x:Bind ListofLocationsInsideViewModel}" DisplayMemberPath="?" SelectedValuePath="?"  SelectedValue="?"   />
                                     <ComboBox  x:Name="cb2" ItemsSource="{x:Bind ListofLocationsInsidePageClass}" DisplayMemberPath="?" SelectedValuePath="?"  SelectedValue="?"   />
                                     -->
-                                    
+                                    <ComboBox  x:Name="cb1" ItemsSource="{x:Bind ListofLocationsInsideDataClass}" DisplayMemberPath="LocationName" SelectedValuePath="LocationName"  SelectedValue="{x:Bind Location}"  />
 
                                     <ListView x:Name="listview4" ItemsSource="{x:Bind ListOfDeparmentEmployees}">
                                         <ListView.ItemTemplate>
