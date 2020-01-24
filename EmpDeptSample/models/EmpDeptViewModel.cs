@@ -19,11 +19,11 @@ namespace EmpDeptSample.models
 
 
 
-        public static List<Location> ListofLocationsInsideViewModel { get; set; }
+      //  public static List<Location> ListofLocationsInsideViewModel { get; set; }
 
         public EmpDeptViewModel() {
 
-            ListofLocationsInsideViewModel = new List<Location>();
+           // ListofLocationsInsideViewModel = new List<Location>();
             InstanceOfDepartmentData = new ObservableCollection<Department>();
             FillDummyData();
         }
@@ -33,6 +33,7 @@ namespace EmpDeptSample.models
             InstanceOfDepartmentData.Add(new Department(1,"Accounts", "USA"));
             InstanceOfDepartmentData.Add(new Department(2, "HumanResource", "Canada"));
             InstanceOfDepartmentData.Add(new Department(3, "Software", "USA"));
+            InstanceOfDepartmentData.Add(new Department(3, "Software", "Russia"));
 
             InstanceOfDepartmentData[0].ListOfDeparmentEmployees.Add(new Employee(1, "Jignesh", 100,"Developer"));
             InstanceOfDepartmentData[0].ListOfDeparmentEmployees.Add(new Employee(2, "Rajesh", 200, "Programmer"));
@@ -49,11 +50,11 @@ namespace EmpDeptSample.models
 
 
 
-            ListofLocationsInsideViewModel.Add(new Location(1,"USA"));
-            ListofLocationsInsideViewModel.Add(new Location(2, "Canada"));
-            ListofLocationsInsideViewModel.Add(new Location(3, "UK"));
-            ListofLocationsInsideViewModel.Add(new Location(4, "China"));
-            ListofLocationsInsideViewModel.Add(new Location(5, "India"));
+            //ListofLocationsInsideViewModel.Add(new Location(1,"USA"));
+            //ListofLocationsInsideViewModel.Add(new Location(2, "Canada"));
+            //ListofLocationsInsideViewModel.Add(new Location(3, "UK"));
+            //ListofLocationsInsideViewModel.Add(new Location(4, "China"));
+            //ListofLocationsInsideViewModel.Add(new Location(5, "India"));
 
         }
 

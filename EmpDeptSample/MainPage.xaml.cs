@@ -31,7 +31,7 @@ namespace EmpDeptSample
             this.InitializeComponent();
         }
 
-        public List<Location> ListofLocationsInsidePageClass { get; set; }
+        //public List<Location> ListofLocationsInsidePageClass { get; set; }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
@@ -43,12 +43,12 @@ namespace EmpDeptSample
         {
               vm = new EmpDeptViewModel();
 
-        ListofLocationsInsidePageClass = new List<Location>();
-            ListofLocationsInsidePageClass.Add(new Location(1, "USA"));
-            ListofLocationsInsidePageClass.Add(new Location(2, "Canada"));
-            ListofLocationsInsidePageClass.Add(new Location(3, "UK"));
-            ListofLocationsInsidePageClass.Add(new Location(4, "China"));
-            ListofLocationsInsidePageClass.Add(new Location(5, "India"));
+        //ListofLocationsInsidePageClass = new List<Location>();
+        //    ListofLocationsInsidePageClass.Add(new Location(1, "USA"));
+        //    ListofLocationsInsidePageClass.Add(new Location(2, "Canada"));
+        //    ListofLocationsInsidePageClass.Add(new Location(3, "UK"));
+        //    ListofLocationsInsidePageClass.Add(new Location(4, "China"));
+        //    ListofLocationsInsidePageClass.Add(new Location(5, "India"));
 
             //EmpDeptViewModel obj = new EmpDeptViewModel();
             //listview3.ItemsSource = obj.InstanceOfDepartmentData;

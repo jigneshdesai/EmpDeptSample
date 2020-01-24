@@ -1,0 +1,36 @@
+﻿<UserControl
+    x:Class="EmpDeptSample.SubControl1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EmpDeptSample"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="using:EmpDeptSample.models"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <models:LocationList x:Name="MyLocatonList" x:Key="MyLocatonList"></models:LocationList>
+    </UserControl.Resources>
+
+
+    <Grid Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+
+        <StackPanel Orientation="Vertical">
+            <TextBlock Margin="5">
+                                            <Run Text="UCDeptNo: " /><Run Text="{Binding DeptNo}" />
+            </TextBlock>
+            <TextBlock Margin="5">
+                                            <Run Text="UCDeptName: " /><Run Text="{Binding DeptName}" />
+            </TextBlock>
+
+            <TextBlock Margin="5">
+                                            <Run Text="UCLocation: " /><Run Text="{Binding Location}" />
+            </TextBlock>
+
+            <ComboBox  x:Name="cb1" ItemsSource="{Binding Source={StaticResource MyLocatonList}, Path=ListofLocationsInsideViewModel}" DisplayMemberPath="LocationName" SelectedValuePath="LocationName"  SelectedValue="{Binding Location}"  />
+        </StackPanel>
+
+    </Grid>
+</UserControl>

@@ -16,7 +16,7 @@ namespace EmpDeptSample.classes
             Location = location;
             ListOfDeparmentEmployees = new List<Employee>();
 
-            ListofLocationsInsideDataClass = EmpDeptViewModel.ListofLocationsInsideViewModel;
+           // ListofLocationsInsideDataClass = EmpDeptViewModel.ListofLocationsInsideViewModel;
         }
 
         public int DeptNo { get; set; }
@@ -24,6 +24,6 @@ namespace EmpDeptSample.classes
         public string Location { get; set; }
         public List<Employee> ListOfDeparmentEmployees { get; set; }
 
-        public List<Location> ListofLocationsInsideDataClass { get; set; }
+       // public List<Location> ListofLocationsInsideDataClass { get; set; }
     }
 }

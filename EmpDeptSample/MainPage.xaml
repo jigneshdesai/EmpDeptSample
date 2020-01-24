@@ -6,8 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:classes="using:EmpDeptSample.classes"
+    xmlns:models="using:EmpDeptSample.models"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <models:LocationList x:Name="MyLocatonList" x:Key="MyLocatonList"></models:LocationList>
+    </Page.Resources>
 
     <Grid>
         <Pivot
@@ -83,6 +88,12 @@
                                             <Run Text="Location: " /><Run Text="{x:Bind Location}" />
                                     </TextBlock>
                                     
+                                    <!--Just to repeat the content and to test if there is a sub usercontrol how binding works.-->
+                                    <local:SubControl1  DataContext="{Binding}" />
+                                    
+                                    
+                                    
+                                    
                                     <!--Uncomment Below Two Lines-->
                                     <!--  
                                         Issue #1:  How to populate combobox with list that is inside DataTemplate.
@@ -91,8 +102,10 @@
                                     <!--
                                     <ComboBox  x:Name="cb1" ItemsSource="{x:Bind ListofLocationsInsideViewModel}" DisplayMemberPath="?" SelectedValuePath="?"  SelectedValue="?"   />
                                     <ComboBox  x:Name="cb2" ItemsSource="{x:Bind ListofLocationsInsidePageClass}" DisplayMemberPath="?" SelectedValuePath="?"  SelectedValue="?"   />
-                                    -->
                                     <ComboBox  x:Name="cb1" ItemsSource="{x:Bind ListofLocationsInsideDataClass}" DisplayMemberPath="LocationName" SelectedValuePath="LocationName"  SelectedValue="{x:Bind Location}"  />
+                                    -->
+
+                                    <ComboBox  x:Name="cb1" ItemsSource="{Binding Source={StaticResource MyLocatonList}, Path=ListofLocationsInsideViewModel}" DisplayMemberPath="LocationName" SelectedValuePath="LocationName"  SelectedValue="{x:Bind Location}"  />
 
                                     <ListView x:Name="listview4" ItemsSource="{x:Bind ListOfDeparmentEmployees}">
                                         <ListView.ItemTemplate>
