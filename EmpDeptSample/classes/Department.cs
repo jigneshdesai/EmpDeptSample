@@ -1,4 +1,5 @@
 ﻿using EmpDeptSample.models;
+using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,13 +8,15 @@ using System.Threading.Tasks;
 
 namespace EmpDeptSample.classes
 {
-   public class Department
+   public class Department : BindableBase
     {
-        public Department(int deptNo, string deptName, string location)
+
+        private string _location;
+        public Department(int pdeptNo, string pdeptName, string plocation)
         {
-            DeptNo = deptNo;
-            DeptName = deptName;
-            Location = location;
+            DeptNo = pdeptNo;
+            DeptName = pdeptName;
+            Location = plocation;
             ListOfDeparmentEmployees = new List<Employee>();
 
            // ListofLocationsInsideDataClass = EmpDeptViewModel.ListofLocationsInsideViewModel;
@@ -21,7 +24,10 @@ namespace EmpDeptSample.classes
 
         public int DeptNo { get; set; }
         public string DeptName { get; set; }
-        public string Location { get; set; }
+        public string Location {
+            get { return this._location; }
+            set { this.SetProperty(ref this._location, value); }
+        }
         public List<Employee> ListOfDeparmentEmployees { get; set; }
 
        // public List<Location> ListofLocationsInsideDataClass { get; set; }

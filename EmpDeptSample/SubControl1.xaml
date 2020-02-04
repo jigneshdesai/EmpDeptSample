@@ -29,7 +29,7 @@
                                             <Run Text="UCLocation: " /><Run Text="{Binding Location}" />
             </TextBlock>
 
-            <ComboBox  x:Name="cb1" ItemsSource="{Binding Source={StaticResource MyLocatonList}, Path=ListofLocationsInsideViewModel}" DisplayMemberPath="LocationName" SelectedValuePath="LocationName"  SelectedValue="{Binding Location}"  />
+            <ComboBox  x:Name="cb1" ItemsSource="{Binding Source={StaticResource MyLocatonList}, Path=ListofLocationsInsideViewModel}" DisplayMemberPath="LocationName" SelectedValuePath="LocationName"  SelectedValue="{Binding Location, Mode=TwoWay}"  />
         </StackPanel>
 
     </Grid>
